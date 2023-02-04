@@ -2,13 +2,12 @@ class FlatsController < ApplicationController
   before_action :set_flat, only: %i[show edit update]
 
   def index
-    if params[:search]
-      @title = params[:search]
-      @flats = Flat.where('name like ?', "%#{params[:search]}%")
-    else
-      @title = nil
-      @flats = Flat.all
-    end
+    @flats = Flat.all
+    return unless params[:search]
+
+    redirect_to flats_path if params[:search] == ''
+    @title = params[:search]
+    @flats = Flat.where('name like ?', "%#{params[:search]}%")
   end
 
   def new
