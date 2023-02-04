@@ -1,0 +1,60 @@
+<div id="show">
+  <%= image_tag @flat.image, class: "banner"%>
+  <div class="container show__content">
+    <div class="content__infos">
+      <div class="title">
+        <h1><%= @flat.name %></h1>
+        <p id="address"><%= @flat.address %></p>
+      </div>
+
+      <div class="description">
+        <h2>A bit more about this flat...</h2>
+        <p><%= @flat.description %></p>
+      </div>
+
+      <div class="details">
+        <h2>Details</h2>
+        <div>
+          <div>
+            <i class="fa-solid fa-people-roof"></i>
+            <span><%= @flat.number_of_guests %></span>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-euro-sign"></i>
+            <span><%= @flat.price_per_night %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="links">
+      <div class="booking">
+        <h3>Book this place!</h3>
+        <form>
+          <div>
+            <label for="from">From:</label>
+            <input type="date" name="from">
+          </div>
+
+          <div>
+            <label for="to">To:</label>
+            <input type="date" name="to">
+          </div>
+
+          <input type="submit" value="Book" class="btn">
+        </form>
+      </div>
+
+      <div class="share">
+        <h5>Share</h5>
+        <ul>
+          <li><i class="fa-brands fa-square-facebook"></i></li>
+          <li><i class="fa-brands fa-square-twitter"></i></li>
+          <li><i class="fa-brands fa-square-pinterest"></i></li>
+          <li><i class="fa-solid fa-envelope"></i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

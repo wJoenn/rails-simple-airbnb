@@ -1,0 +1,56 @@
+.flat-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.card {
+  width: 300px;
+  box-shadow: 0 0 10px rgba(200, 200, 200, 0.2);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__image {
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__content {
+  padding: 15px;
+  background-color: #212425;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.card__content > div {
+  display: flex;
+  gap: 20px;
+}
+
+.card__links {
+  padding: 15px;
+  font-size: 0.8rem;
+  display: flex;
+}
+
+.card__links a {
+  border-right: 1px solid rgba(211, 211, 211, 0.5);
+  padding-right: 5px;
+  margin-right: 5px;
+}
+
+.card__links a:last-child {
+  border: none;
+}
+
+
+.card__links a:hover {
+  color: #ff5a5f;
+}

@@ -1,0 +1,81 @@
+.banner {
+  width: 100vw;
+  height: 300px;
+  margin-top: -50px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.show__content {
+  background-color: transparent;
+  margin-top: -50px !important;
+  display: flex;
+}
+
+.show__content > div > div {
+  background-color: #212425;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px 20px 15px;
+}
+
+.content__infos {
+  flex-grow: 1;
+}
+
+.content__infos .title h1 {
+  margin-bottom: 10px;
+}
+
+.details > div {
+  display: flex;
+  gap: 20px;
+}
+
+.links {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.booking form > div {
+  display: flex;
+  background-color: #181a1b;
+  align-items: center;
+  font-size: 0.8rem;
+  border: 1px solid rgba(211, 211, 211, 0.1);
+  border-radius: 5px;
+}
+
+.booking form > div > input, .booking form > div > label {
+  padding: 5px 10px;
+}
+
+.booking form > div > input {
+  flex-grow: 1;
+  background-color: lightgray;
+  color: black;
+  border-radius: 0 5px 5px 0;
+}
+
+.share {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.share ul {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.share li {
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.share li:hover {
+  transform: scale(1.1);
+}

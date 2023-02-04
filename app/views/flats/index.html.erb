@@ -1,0 +1,31 @@
+<div id="index" class="container">
+  <h1><%= @title ? "Search for \"#{@title}\"" : "All our Flats" %></h1>
+
+  <div class="flat-list">
+    <% @flats.each do |f| %>
+      <div class="card">
+        <%= image_tag f.image, class: "card__image" %>
+        <div class="card__content">
+          <h2><%= f.name %></h2>
+          <p><%= f.address %></p>
+          <div>
+            <div>
+              <i class="fa-solid fa-people-roof"></i>
+              <span><%= f.number_of_guests %></span>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-euro-sign"></i>
+              <span><%= f.price_per_night %></span>
+            </div>
+          </div>
+        </div>
+        <div class="card__links">
+          <%= link_to "More infos", flat_path(f) %>
+          <%= link_to "Edit", edit_flat_path(f) %>
+          <%= link_to "Remove", flat_path(f), data: { turbo_method: :delete } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

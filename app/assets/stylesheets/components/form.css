@@ -1,0 +1,28 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > * {
+  margin: 10px 0;
+}
+
+form > div {
+  display: flex;
+  justify-content: space-around;
+}
+
+form > div > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+form input, form textarea {
+  padding: 7px 15px;
+  background-color: #212425;
+  border: none;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.5);
+  border-radius: 3px;
+  color: inherit;
+}

@@ -1,0 +1,18 @@
+<%= form_with model: @flat do |f| %>
+    <%= f.text_field :name, placeholder: "name..." %>
+    <%= f.text_field :address, placeholder: "address..." %>
+    <%= f.text_area :description, rows: 10, placeholder: "description..." %>
+    <div>
+      <div>
+        <%= f.label :number_of_guests %>
+        <%= f.number_field :number_of_guests %>
+      </div>
+
+      <div>
+        <%= f.label :price_per_night %>
+        <%= f.number_field :price_per_night %>
+      </div>
+    </div>
+    <%= f.text_field :image, placeholder: "image url...", value: ("" if @flat.image == 'unsplash-banner.avif') %>
+    <%= f.submit class: "btn" %>
+  <% end %>

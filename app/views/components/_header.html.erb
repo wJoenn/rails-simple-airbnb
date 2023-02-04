@@ -1,0 +1,14 @@
+<header>
+  <%= link_to flats_path do %>
+    <%= image_tag "airbnb_logo.png", id: "home-button"%>
+  <% end %>
+
+  <div class="buttons">
+    <form action="/flats">
+      <input type="text" name="search" placeholder="cozy...">
+      <input type="submit" value="Search" class="btn" >
+    </form>
+
+    <%= link_to "Add Flat", new_flat_path, class: "btn" %>
+  </div>
+</header>

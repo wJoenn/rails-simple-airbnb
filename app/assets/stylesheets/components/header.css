@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #212425;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.5);
+  margin-bottom: 50px;
+}
+
+#home-button {
+  width: 150px;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons form {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.buttons form input {
+  margin: 0;
+}
+
+.buttons form input.btn {
+  border-radius: 0 5px 5px 0;
+}
+
+.buttons form input:not(.btn) {
+  background-color: lightgray;
+  color: black;
+  border-radius: 5px 0 0 5px;
+}
