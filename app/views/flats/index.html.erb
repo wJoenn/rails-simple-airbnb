@@ -1,5 +1,5 @@
 <div id="index" class="container">
-  <h1><%= @title ? "Search for \"#{@title}\"" : "All our Flats" %></h1>
+  <h1><%= @search ? "Search for \"#{@search}\"" : "All our Flats" %></h1>
 
   <div class="flat-list">
     <% @flats.each do |f| %>
